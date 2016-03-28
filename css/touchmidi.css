@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    position:absolute;
+}
+
+.row {
+  display: flex;
+  flex: 1 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /*border: 2px solid blue;*/
+}
+
+.widget {
+  display: flex;
+  flex: 1 1;
+  border: 2px solid green;
+  background-color: #333333;
+  border-radius: 8px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.rcontainer {
+  display: flex;
+  flex: 1 1;
+  margin: 0px;
+}
+
+.vcontainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  margin: 0px;
+}
