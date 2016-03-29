@@ -12,7 +12,7 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
 Layout is done via HTML, but simplified, everything is div tags, four basic containers (e.g. row, column) and custom attributes. e.g.
 ```html
 <div class="row">
-  <div class="widget slider" params="V, 0, 128, 77" colour="#4488FF"/>
+  <div class="widget slider" params="V, 0, 128, 77" colour="#4488FF"></div>
 </div>
 ```
 
