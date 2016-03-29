@@ -5,9 +5,16 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Vertical silder
  * Horizontal slider
  * Push button
- * Toggle button
- * XY Pad
- * Round encoder / knob
+ * Toggle button (soon)
+ * XY Pad (soon)
+ * Round encoder / knob  (soon)
+
+Layout is done via HTML, but simplified, everything is div tags, four basic containers (e.g. row, column) and custom attributes. e.g.
+```html
+<div class="row">
+  <div class="widget slider" params="V, 0, 128, 77" colour="#4488FF"/>
+</div>
+```
 
 ### Tested Browsers
 Chrome & Firefox
