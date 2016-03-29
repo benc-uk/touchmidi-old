@@ -2,16 +2,26 @@ body {
   margin: 0;
   background-color: black;
   color: white;
+  font-family: Arial;
 }
 
-.main {
+.column {
     display: flex;
     flex-direction: column;
     top:0;
     bottom:0;
-    left: 0;
-    right: 0;
     position:absolute;
+}
+
+.widget_label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  font-size: 200%;
 }
 
 .row {
@@ -25,21 +35,32 @@ body {
 .widget {
   display: flex;
   flex: 1 1;
-  border: 2px solid green;
-  background-color: #333333;
+  border: 4px solid grey;
   border-radius: 8px;
-  margin: 5px;
-  text-align: center;
-  vertical-align: middle;
+  margin: 6px;
+  justify-content: center;
+  align-items: center;
 }
 
-.rcontainer {
+.button {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slider_h {
+  justify-content: center;
+  align-items: center;
+}
+
+.container_h {
   display: flex;
+  flex-direction: row;
   flex: 1 1;
   margin: 0px;
 }
 
-.vcontainer {
+.container_v {
   display: flex;
   flex-direction: column;
   flex: 1 1;
