@@ -2,7 +2,7 @@
 Flexible HTML5 based control surface for controlling external devices via MIDI
 
 Designed for use on touch screen devices, but also compatible with keyboard and mouse. A range of simple widgets is supported:
- * Vertical silder
+ * Vertical slider
  * Horizontal slider
  * Push button
  * Toggle button (soon)
