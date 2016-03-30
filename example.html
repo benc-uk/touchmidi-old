@@ -14,28 +14,31 @@
 
     <div class="row">
       <div class="container_v">
-        <div class="widget slider" params="H, 0, 500, 13" colour="#EE0000"></div>
-        <div class="widget slider" params="H, 0, 128, 77" colour="#00EE00"></div>
+        <div class="widget slider_h" colour="#EE0000" midicc="1, 74" label="Filter Cutoff"></div>
+        <div class="widget slider_h" colour="#EE0000" midicc="1, 71" label="Filter Resonance"></div>
       </div>
       <div class="container_h">
-        <div class="widget slider" params="V, 0, 256, 99" colour="#EE8800"></div>
-        <div class="widget slider" params="V, 0, 128, 12" colour="#88EE88"></div>
-        <div class="widget slider" params="V, 0, 128, 77" colour="#EEEE88"></div>
+        <div class="widget slider_v" colour="#EE8800" midicc="1, 51" label="#"></div>
+        <div class="widget slider_v" colour="#EE8800" midicc="1, 52" label="#"></div>
+        <div class="widget slider_v" colour="#EE8800" midicc="1, 53" label="#"></div>
+        <div class="widget slider_v" colour="#338877" midicc="1, 22" label="#"></div>
+        <div class="widget slider_v" colour="#338877" midicc="1, 34" label="#"></div>
+        <div class="widget slider_v" colour="#338877" midicc="1, 44" label="#"></div>
       </div>
     </div>
 
     <div class="row">
-      <div class="widget slider" params="V, 0, 128, 77" colour="#4488FF"></div>
+      <div class="widget slider_v" colour="#4488FF" midicc="1, 115" label="#"></div>
       <div class="container_v">
         <div class="container_h">
-          <div class="widget button" params="P" label="Track 1" colour="#EE00EE"></div>
-          <div class="widget button" params="P" label="Track 2" colour="#EE00EE"></div>
-          <div class="widget button" params="P" label="Track 3" colour="#EE00EE"></div>
+          <div class="widget button" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
+          <div class="widget button" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
+          <div class="widget button" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
         </div>
         <div class="container_h">
-          <div class="widget button" params="P" label="Track 4" colour="#EE00EE"></div>
-          <div class="widget button" params="P" label="Track 5" colour="#EE00EE"></div>
-          <div class="widget button" params="P" label="Track 6" colour="#EE00EE"></div>
+          <div class="widget button" label="Track 4" colour="#2200EE"></div>
+          <div class="widget button" label="Track 5" colour="#2200EE"></div>
+          <div class="widget button" label="Track 6" colour="#2200EE"></div>
         </div>
       </div>
     </div>
@@ -45,6 +48,7 @@
 
   <script src="lib/slider.js"></script>
   <script src="lib/button.js"></script>
+  <script src="lib/midi.js"></script>
   <script src="lib/touchmidi.js"></script>
 </body>
 

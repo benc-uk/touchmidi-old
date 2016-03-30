@@ -49,8 +49,10 @@ body {
 }
 
 .slider_h {
-  justify-content: center;
-  align-items: center;
+
+}
+.slider_v {
+
 }
 
 .container_h {
