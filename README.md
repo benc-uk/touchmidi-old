@@ -5,9 +5,15 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Vertical slider
  * Horizontal slider
  * Push button
- * Toggle button (soon)
- * XY Pad (soon)
- * Round encoder / knob  (soon)
+ * Toggle button (planned)
+ * XY Pad (planned)
+ * Round encoder / knob (planned)
+
+Supported MIDI messages are:
+ * Note On & Note Off - For button widgets
+ * CC - For all widgets
+ * NRPN - For all widgets (planned)
+ * Bank/patch change - For all widgets (planned)
 
 Layout is done via HTML, but simplified, everything is laid out with div tags, four basic containers (e.g. row, column) and custom attributes. e.g.
 ```html
@@ -15,9 +21,10 @@ Layout is done via HTML, but simplified, everything is laid out with div tags, f
   <div class="widget slider_v" colour="#EE8800" midicc="1, 51" label="#"></div>
 </div>
 ```
-Adds a slider widget, with a orange colour which will send MIDI control change number 51 on MIDI channel 1
+Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
 
 ### Tested Browsers
 Tested on Chrome v49. Chrome is the only browser known to work due to limited MIDI support in other browsers e.g. Firefox and Safari do not support the Web MIDI API spec https://www.w3.org/TR/webmidi/
 
+### Example Screenshots
 ![Screenshot](https://cloud.githubusercontent.com/assets/14982936/14171601/b0087d10-f72b-11e5-9369-19930949bdb9.png)
