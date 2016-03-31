@@ -20,4 +20,4 @@ Adds a slider widget, with a orange colour which will send MIDI control change n
 ### Tested Browsers
 Tested on Chrome v49. Chrome is the only browser known to work due to limited MIDI support in other browsers e.g. Firefox and Safari do not support the Web MIDI API spec https://www.w3.org/TR/webmidi/
 
-![Screenshot](https://cloud.githubusercontent.com/assets/14982936/14116750/3c4dbc26-f5d9-11e5-8b05-4adaea02a31d.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/14982936/14171601/b0087d10-f72b-11e5-9369-19930949bdb9.png)
