@@ -6,8 +6,8 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Horizontal slider
  * Push button
  * Toggle button
+ * Round encoder / knob
  * XY Pad (planned)
- * Round encoder / knob (planned)
 
 Supported MIDI messages are:
  * Note On & Note Off - For button widgets
