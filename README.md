@@ -5,7 +5,7 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Vertical slider
  * Horizontal slider
  * Push button
- * Toggle button (planned)
+ * Toggle button
  * XY Pad (planned)
  * Round encoder / knob (planned)
 

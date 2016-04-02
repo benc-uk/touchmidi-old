@@ -10,44 +10,52 @@
 </head>
 
 <body onload="init()">
-  <div class="column" style="width:100%">
+  <div class="main_column" style="width:100%">
 
     <div class="row">
-      <div class="container_v">
-        <div class="widget slider_h" colour="#EE0000" midicc="1, 74" label="Filter Cutoff"></div>
-        <div class="widget slider_h" colour="#EE0000" midicc="1, 71" label="Filter Resonance"></div>
+      <div class="column">
+        <div class="slider horizontal" colour="#EE0000" midicc="1, 74" label="Filter Cutoff"></div>
+        <div class="slider horizontal" colour="#EE0000" midicc="1, 71" label="Filter Resonance"></div>
       </div>
-      <div class="container_h">
-        <div class="widget slider_v" colour="#EE8800" midicc="1, 51" label="#"></div>
-        <div class="widget slider_v" colour="#EE8800" midicc="1, 52" label="#"></div>
-        <div class="widget slider_v" colour="#EE8800" midicc="1, 53" label="#"></div>
-        <div class="widget slider_v" colour="#338877" midicc="1, 22" label="#"></div>
-        <div class="widget slider_v" colour="#338877" midicc="1, 34" label="#"></div>
-        <div class="widget slider_v" colour="#338877" midicc="1, 44" label="#"></div>
+      <div class="row">
+        <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
+        <div class="slider" colour="#EE8800" midicc="1, 52" label="#"></div>
+        <div class="slider" colour="#EE8800" midicc="1, 53" label="#"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 22" label="#"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 34" label="#"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 44" label="#"></div>
       </div>
     </div>
 
     <div class="row">
-      <div class="widget slider_v" colour="#4488FF" midicc="1, 115" label="#"></div>
-      <div class="container_v">
-        <div class="container_h">
-          <div class="widget button" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
-          <div class="widget button" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
-          <div class="widget button" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
-        </div>
-        <div class="container_h">
-          <div class="widget button" label="Track 4" colour="#2200EE"></div>
-          <div class="widget button" label="Track 5" colour="#2200EE"></div>
-          <div class="widget button" label="Track 6" colour="#2200EE"></div>
-        </div>
+      <div class="row">
+        <div class="button" label="A" colour="#2200EE"></div>
+        <div class="button" label="B" colour="#2200EE"></div>
+        <div class="button" label="C" colour="#2200EE"></div>
+        <div class="button" label="D" colour="#2200EE"></div>
+        <div class="button" label="E" colour="#2200EE"></div>
+        <div class="button" label="F" colour="#2200EE"></div>
+      </div>
+      <div class="row">
+        <div class="encoder" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
+        <div class="encoder" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
+        <div class="encoder" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
       </div>
     </div>
 
+    <div class="row">
+      <div class="button toggle" label="Bank A" colour="#33cccc"></div>
+      <div class="button toggle" label="Bank B" colour="#33cccc"></div>
+      <div class="button toggle" label="Bank C" colour="#33cccc"></div>
+      <div class="encoder" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
+      <div class="encoder" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
+      <div class="encoder" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
+    </div>
   </div>
-
 
   <script src="lib/slider.js"></script>
   <script src="lib/button.js"></script>
+  <script src="lib/encoder.js"></script>
   <script src="lib/midi.js"></script>
   <script src="lib/touchmidi.js"></script>
 </body>
