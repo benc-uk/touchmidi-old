@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Touch MIDI</title>
+  <title>Touch MIDI Example</title>
   <meta name="description" content="Flexible HTML5 based touch based control surface for MIDI">
   <meta name="author" content="Ben Coleman">
   <link rel="stylesheet" href="css/touchmidi.css">
+  <link rel="icon" type="image/png" href="img/icon.png">
 </head>
 
 <body onload="init()">
@@ -14,48 +15,50 @@
 
     <div class="row">
       <div class="column">
-        <div class="slider horizontal" colour="#EE0000" midicc="1, 74" label="Filter Cutoff"></div>
-        <div class="slider horizontal" colour="#EE0000" midicc="1, 71" label="Filter Resonance"></div>
+        <div class="slider horizontal" colour="#EE0000" midicc="1, 74" label="Filter Cut"></div>
+        <div class="slider horizontal" colour="#EE0000" midicc="1, 71" label="Filter Res"></div>
       </div>
       <div class="row">
         <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
         <div class="slider" colour="#EE8800" midicc="1, 52" label="#"></div>
         <div class="slider" colour="#EE8800" midicc="1, 53" label="#"></div>
-        <div class="slider" colour="#33FF22" midicc="1, 22" label="#"></div>
-        <div class="slider" colour="#33FF22" midicc="1, 34" label="#"></div>
-        <div class="slider" colour="#33FF22" midicc="1, 44" label="#"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 22" label="Atk"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 34" label="Dec"></div>
+        <div class="slider" colour="#33FF22" midicc="1, 44" label="Rel"></div>
       </div>
     </div>
 
     <div class="row">
       <div class="row">
-        <div class="button" label="A" colour="#2200EE"></div>
-        <div class="button" label="B" colour="#2200EE"></div>
-        <div class="button" label="C" colour="#2200EE"></div>
-        <div class="button" label="D" colour="#2200EE"></div>
-        <div class="button" label="E" colour="#2200EE"></div>
-        <div class="button" label="F" colour="#2200EE"></div>
+        <div class="button" label="C" colour="#2200EE" midinote="1, 55, 127|1, 57, 127"></div>
+        <div class="button" label="D" colour="#2200EE" midinote="1, 50, 127"></div>
+        <div class="button" label="E" colour="#2200EE" midinote="1, 52, 127"></div>
+        <div class="button" label="F" colour="#2200EE" midinote="1, 53, 127"></div>
+        <div class="button" label="G" colour="#2200EE" midinote="1, 55, 127"></div>
+        <div class="button" label="A" colour="#2200EE" midinote="1, 57, 127"></div>
+        <div class="button" label="B" colour="#2200EE" midinote="1, 59, 127"></div>
       </div>
       <div class="row">
-        <div class="encoder" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
-        <div class="encoder" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
-        <div class="encoder" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
+        <div class="encoder" label="Filt" colour="#EE00EE" midicc="1, 88"></div>
+        <div class="encoder" label="Osc1" colour="#EE00EE"></div>
+        <div class="encoder" label="Osc2" colour="#EE00EE"></div>
       </div>
     </div>
 
     <div class="row">
-      <div class="button toggle" label="Bank A" colour="#33cccc"></div>
-      <div class="button toggle" label="Bank B" colour="#33cccc"></div>
-      <div class="button toggle" label="Bank C" colour="#33cccc"></div>
-      <div class="encoder" label="F" colour="#EE00EE" midinote="1, 53, 127"></div>
-      <div class="encoder" label="G" colour="#EE00EE" midinote="1, 55, 127"></div>
-      <div class="encoder" label="A" colour="#EE00EE" midinote="1, 57, 127"></div>
+      <div class="xypad" colour="#00FF00" midicc="1, 74|1, 71"></div>
+      <div class="button toggle" label="Bank C" colour="#33cccc" midicc="1, 7, 0, 127"></div>
+      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 3"></div>
+      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 2"></div>
+      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 6"></div>
     </div>
   </div>
 
+  <!-- **** Include JS libraries **** -->
   <script src="lib/slider.js"></script>
   <script src="lib/button.js"></script>
   <script src="lib/encoder.js"></script>
+  <script src="lib/xypad.js"></script>
   <script src="lib/midi.js"></script>
   <script src="lib/touchmidi.js"></script>
 </body>
