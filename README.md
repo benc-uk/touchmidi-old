@@ -29,7 +29,7 @@ There are various MIDI actions that can be attached to a widget as a standard XM
 * **MIDI Note**
 
 Send MIDI note on and off messages. Supported widget types: **`button`** only. Note on is sent when the button is first pressed, Note off sent when it is released. For toggle buttons the note will be held, which is useful for latching arpegigators
-```xml
+```bash
 midinote="channel, note_number, velocity"
 ```
 
