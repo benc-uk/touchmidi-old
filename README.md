@@ -1,21 +1,19 @@
 # TouchMIDI
-Flexible HTML5 based control surface for controlling external devices via MIDI
+A flexible HTML5 based control surface for controlling external devices via MIDI
 
 Designed for use on touch screen devices, but also compatible with keyboard and mouse. A range of simple widgets is supported:
- * Vertical slider
- * Horizontal slider
- * Push button
- * Toggle button
- * Round encoder / knob
+ * Vertical & horizontal slider
+ * Push & toggle button
+ * Round encoder
  * XY Pad
 
 Supported MIDI messages are:
- * Note On & Note Off - For button widgets
- * CC - For all widgets
- * NRPN - For all widgets except buttons
- * Program change - For all widgets
+ * Note On & Note off
+ * Controler change (CC)
+ * NRPN
+ * Program change / bank select
 
-Layout is done via HTML, and everything is laid out with sets of simple `div` tags, with some custom (not standard HTML) attributes. For example:
+Layout is done in HTML with simple `div` tags. A series of custom (not standard HTML) attributes extend the model. For example:
 ```html
 <div class="row">
   <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
@@ -26,6 +24,7 @@ This adds a row to the page with a slider widget, with a orange colour which wil
 ---
 
 ## Layout and Introduction
+See basic_template.html for an example skeleton file. Within the body of the page there should be at least one div with a class of *main_column*, and a width % specified in a style attribute. Within this use divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets are also divs with classes as described below.
 
 ## Widget Types
 There are four fundamental types of wigdet; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if ommited vertical is the default. This brings the total set of widgets available to six.
