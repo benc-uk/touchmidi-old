@@ -24,12 +24,13 @@ Layout is done via HTML, but simplified, everything is laid out with div tags, f
 Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
 
 ### MIDI Actions
-There are various MIDI actions that can be attached to a widget, these are
+There are various MIDI actions that can be attached to a widget as a standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so order is important. Multiple actions can be specified with a pipe, e.g. `midinote=`
 
-**MIDI Note**
-Send a MIDI note on and off messages
-```javascript
-midinote(channel, note_number, velocity)
+* **MIDI Note**
+
+Send MIDI note on and off messages. Supported widget types: **`button`** only. Note on is sent when the button is first pressed, Note off sent when it is released. For toggle buttons the note will be held, which is useful for latching arpegigators
+```xml
+midinote="channel, note_number, velocity"
 ```
 
 midicc
