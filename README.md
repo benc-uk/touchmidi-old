@@ -47,11 +47,11 @@ The value sent with the CC message is dependant on the widget type:
 
 #### MIDI Action — NRPN Change
 
-This is used to send NRPN (Non-Registered Parameter Number) messages. Supported widget types: *`slider`*, *`encoder`*, *`xypad`*.
+This is used to send NRPN (Non-Registered Parameter Number) messages. Supported widget types: *`slider`*, *`encoder`*.
 ```bash
-midinrpn="channel, msb, lsb, max"
+midinrpn="channel, msb, lsb"
 ```
-Note. Unlike the mididcc action, where a max of 127 is assumed you **must supply the max value**. As per the MIDI spec NRPN messsages can send values greater than 127. If the max parameter is set to greater than 127, then the value will sent as a 14-bit MSB/LSB pair
+Note. Unlike the mididcc action, where a max of 127 is assumed you should supply the max value as described above. As per the MIDI spec NRPN messsages can send values greater than 127. If the max parameter is set to greater than 127, then the value will sent as a 14-bit MSB/LSB pair
 
 The value sent with the NRPN message is dependant on the widget type:
  * *`slider`* & *`encoder`*: Value sent is dynamic based the current value of the widget. The message is sent when the user changes the value via the mouse or touch action.
