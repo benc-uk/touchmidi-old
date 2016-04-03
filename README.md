@@ -35,11 +35,14 @@ midinote="channel, note_number, velocity"
 
 * **MIDI Control Change (CC)**
 
-This is used to send control change messages with a range of values. Supported widget types: **ALL**. This action sends standard MIDI control messages, where the CC number = 0-127, for additional or equipment specific control messages a NRPN should be used (see below)
+This is used to send control change messages with a range of values. Supported widget types: **ALL**. This action sends standard MIDI control messages, where the CC number = 0-127, for additional or equipment specific control messages a NRPN should be used (see below).
+Note. A min value of 0, and max value of 127 is assumed, as this is the permitted range for standard MIDI CC
 ```bash
 midicc="channel, cc_number [, val_on] [, val_off]"
 ```
-The value sent is dependant on the widegt type:
+The value sent is dependant on the widget type:
+ * *`slider`* & *`encoder`*: Value sent is the current value of the widget, sent when the user moves or touches the widget
+ * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midicc="1, 71|1, 74"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74
 
 
 
