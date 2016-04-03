@@ -12,16 +12,33 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
 Supported MIDI messages are:
  * Note On & Note Off - For button widgets
  * CC - For all widgets
- * NRPN - For all widgets (planned)
- * Bank/patch change - For all widgets (planned)
+ * NRPN - For all widgets except buttons
+ * Program change - For all widgets
 
-Layout is done via HTML, but simplified, everything is laid out with div tags, four basic containers (e.g. row, column) and custom attributes. e.g.
+Layout is done via HTML, and everything is laid out with sets of simple `div` tags, with some custom (not standard HTML) attributes
 ```html
 <div class="row">
-  <div class="widget slider_v" colour="#EE8800" midicc="1, 51" label="#"></div>
+  <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
 </div>
 ```
 Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
+
+## Layout and Introduction
+
+## Widget Types
+There are four fundamental types of wigdet; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if ommited vertical is the default. This brings the total set of widgets available to six.
+
+
+#### Common Parameters
+Blah
+
+#### Slider
+Blah
+```html
+<div class="slider"> <!-- default is vertical -->
+<div class="slider horizontal">
+<div class="slider vertical">
+```
 
 ## MIDI Actions
 There are various MIDI actions that can be attached to a widget, this is done via standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so **_order is important_**. Parameters are comma seperated and expected to be integers, some minimal parsing and type checking is done, but beware. Multiple actions of the same type can be specified, seperated with a pipe, e.g. `midinote="1, 55, 127|1, 57, 64`. The action types closely map to various MIDI message types, as follows:
@@ -51,11 +68,11 @@ This is used to send NRPN (Non-Registered Parameter Number) messages. Supported 
 ```bash
 midinrpn="channel, msb, lsb"
 ```
-Note. Unlike the mididcc action, where a max of 127 is assumed you should supply the max value as described above. As per the MIDI spec NRPN messsages can send values greater than 127. If the max parameter is set to greater than 127, then the value will sent as a 14-bit MSB/LSB pair
+Note. Unlike the mididcc action, where a max of 127 is assumed you should supply the max value as described above. As per the MIDI spec NRPN messsages can send values greater than 127, if the max parameter is set to greater than 127, then the value will sent as a 14-bit MSB/LSB pair
 
 The value sent with the NRPN message is dependant on the widget type:
  * *`slider`* & *`encoder`*: Value sent is dynamic based the current value of the widget. The message is sent when the user changes the value via the mouse or touch action.
- * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midinrpn="1, 2, 68, 200|1, 2, 55, 200"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74.
+ * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midinrpn="1, 2, 68|1, 2, 55"` the X position on the pad will be sent as NRPN 2:68 and the Y position sent as 2:55. NOTE. The min and max values are common for both the X and Y axises
 
 
 
