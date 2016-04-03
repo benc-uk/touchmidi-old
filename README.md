@@ -23,8 +23,8 @@ Layout is done via HTML, but simplified, everything is laid out with div tags, f
 ```
 Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
 
-### MIDI Actions
-There are various MIDI actions that can be attached to a widget as a standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so **_order is important_**. Multiple actions can be specified, seperated with a pipe, e.g. `midinote="1, 55, 127|1, 57, 64`
+## MIDI Actions
+There are various MIDI actions that can be attached to a widget, this is done via standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so **_order is important_**. Parameters are comma seperated and expected to be integers, some minimal parsing and type checking is done, but beware. Multiple actions of the same type can be specified, seperated with a pipe, e.g. `midinote="1, 55, 127|1, 57, 64`. The action types closely map to various MIDI message types, as follows:
 
 * **MIDI Note**
 
@@ -33,7 +33,16 @@ Send MIDI note on and off messages. Supported widget types: **`button`** only. N
 midinote="channel, note_number, velocity"
 ```
 
-midicc
+* **MIDI Control Change (CC)**
+
+This is used to send control change messages with a range of values. Supported widget types: **ALL**. This action sends standard MIDI control messages, where the CC number = 0-127, for additional or equipment specific control messages a NRPN should be used (see below)
+```bash
+midicc="channel, cc_number [, val_on] [, val_off]"
+```
+The value sent is dependant on the widegt type:
+
+
+
 
 ### Tested Browsers
 Tested on Chrome v49. Chrome is the only browser known to work due to limited MIDI support in other browsers e.g. Firefox and Safari do not support the Web MIDI API spec https://www.w3.org/TR/webmidi/
