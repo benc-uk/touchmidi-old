@@ -24,7 +24,10 @@ This adds a row to the page with a slider widget, with a orange colour which wil
 ---
 
 ## Layout and Introduction
-See basic_template.html for an example skeleton file. Within the body of the page there should be at least one div with a class of *main_column*, and a width % specified in a style attribute. Within this use divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets are also divs with classes as described below.
+See **basic_template.html** for an example skeleton file to get started with. Within the body of the page there should be at least one div with a class of *main_column*, and a width % specified in a style attribute. Within this, use divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets themselves are also divs with classes as described below, widget divs should be empty with no children. Row and column divs can be nested to layout the page, everything is laid out using CSS3 flexbox to flow and have widgets fill space and the entire page. 
+
+#### General Usage
+Load page, use chrome, MIDI port may not open, specify MIDI port blah 
 
 ## Widget Types
 There are four fundamental types of wigdet; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if ommited vertical is the default. This brings the total set of widgets available to six.
