@@ -26,14 +26,14 @@ Adds a slider widget, with a orange colour which will send MIDI control change (
 ## MIDI Actions
 There are various MIDI actions that can be attached to a widget, this is done via standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so **_order is important_**. Parameters are comma seperated and expected to be integers, some minimal parsing and type checking is done, but beware. Multiple actions of the same type can be specified, seperated with a pipe, e.g. `midinote="1, 55, 127|1, 57, 64`. The action types closely map to various MIDI message types, as follows:
 
-* **MIDI Note**
+#### MIDI Action — Note
 
 Send MIDI note on and off messages. Supported widget types: **`button`** only. Note on is sent when the button is first pressed, Note off sent when it is released. For toggle buttons the note will be held, which is useful for latching arpegigators
 ```bash
 midinote="channel, note_number, velocity"
 ```
 
-* **MIDI Control Change (CC)**
+#### MIDI Action —  Control Change (CC)
 
 This is used to send control change messages with a range of values. Supported widget types: **ALL**. This action sends standard MIDI control messages, where the CC number = 0-127, for additional or equipment specific control messages a NRPN should be used (see below).
 Note. A min value of 0, and max value of 127 is assumed, as this is the permitted range for standard MIDI CC
@@ -45,7 +45,7 @@ The value sent with the CC message is dependant on the widget type:
  * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midicc="1, 71|1, 74"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74.
  * *`button`*: You must supply two extra parameters after the CC number, these are `val_on` and `val_off`. The widget will send `val_on` when the button is pressed down, and `val_off` when the button is released.
 
-* **MIDI NRPN**
+#### MIDI Action — NRPN Change
 
 This is used to send NRPN (Non-Registered Parameter Number) messages. Supported widget types: *`slider`*, *`encoder`*, *`xypad`*.
 ```bash
