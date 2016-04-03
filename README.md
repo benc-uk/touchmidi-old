@@ -26,7 +26,7 @@ Adds a slider widget, with a orange colour which will send MIDI control change (
 ### MIDI Actions
 There are various MIDI actions that can be attached to a widget, these are
 
-#### MIDI Note
+**MIDI Note**
 Send a MIDI note on and off messages
 ```javascript
 midinote(channel, note_number, velocity)
