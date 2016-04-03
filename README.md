@@ -40,10 +40,22 @@ Note. A min value of 0, and max value of 127 is assumed, as this is the permitte
 ```bash
 midicc="channel, cc_number [, val_on] [, val_off]"
 ```
-The value sent is dependant on the widget type:
- * *`slider`* & *`encoder`*: Value sent is the current value of the widget, sent when the user moves or touches the widget
- * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midicc="1, 71|1, 74"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74
+The value sent with the CC message is dependant on the widget type:
+ * *`slider`* & *`encoder`*: Value sent is dynamic based the current value of the widget. The message is sent when the user changes the value via the mouse or touch action.
+ * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midicc="1, 71|1, 74"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74.
+ * *`button`*: You must supply two extra parameters after the CC number, these are `val_on` and `val_off`. The widget will send `val_on` when the button is pressed down, and `val_off` when the button is released.
 
+* **MIDI NRPN**
+
+This is used to send NRPN (Non-Registered Parameter Number) messages. Supported widget types: *`slider`*, *`encoder`*, *`xypad`*.
+```bash
+midinrpn="channel, msb, lsb, max"
+```
+Note. Unlike the mididcc action, where a max of 127 is assumed you **must supply the max value**. As per the MIDI spec NRPN messsages can send values greater than 127. If the max parameter is set to greater than 127, then the value will sent as a 14-bit MSB/LSB pair
+
+The value sent with the NRPN message is dependant on the widget type:
+ * *`slider`* & *`encoder`*: Value sent is dynamic based the current value of the widget. The message is sent when the user changes the value via the mouse or touch action.
+ * *`xypad`*: Sends two values based on the X, Y position of the crosshair on the pad. You **must** provide two actions seperated by a pipe, the first is mapped to X and the second Y. e.g. `midinrpn="1, 2, 68, 200|1, 2, 55, 200"` the X position on the pad will be sent as CC 71 and the Y position sent as CC 74.
 
 
 
