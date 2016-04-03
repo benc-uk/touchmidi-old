@@ -15,13 +15,15 @@ Supported MIDI messages are:
  * NRPN - For all widgets except buttons
  * Program change - For all widgets
 
-Layout is done via HTML, and everything is laid out with sets of simple `div` tags, with some custom (not standard HTML) attributes
+Layout is done via HTML, and everything is laid out with sets of simple `div` tags, with some custom (not standard HTML) attributes. For example:
 ```html
 <div class="row">
   <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
 </div>
 ```
-Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
+This adds a row to the page with a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
+
+---
 
 ## Layout and Introduction
 
