@@ -24,7 +24,7 @@ Layout is done via HTML, but simplified, everything is laid out with div tags, f
 Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
 
 ### MIDI Actions
-There are various MIDI actions that can be attached to a widget as a standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so order is important. Multiple actions can be specified with a pipe, e.g. `midinote=`
+There are various MIDI actions that can be attached to a widget as a standard XML/HTML attribute, e.g. `midinote="1, 2, 3"`. The parameters are positional so **_order is important_**. Multiple actions can be specified, seperated with a pipe, e.g. `midinote="1, 55, 127|1, 57, 64`
 
 * **MIDI Note**
 
