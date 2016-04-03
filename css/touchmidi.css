@@ -41,6 +41,7 @@ body {
   font-size: 30px;
   padding: 0px;
   margin: 0px;
+  text-align: center;
 }
 
 .button, .slider, .xypad {
@@ -54,7 +55,6 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-
 
 .encoder {
   display: flex;
