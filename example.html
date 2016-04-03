@@ -30,9 +30,9 @@
 
     <div class="row">
       <div class="row">
-        <div class="button" label="C" colour="#2200EE" midinote="1, 55, 127|1, 57, 127"></div>
+        <div class="button toggle" label="C" colour="#2200EE" midinote="1, 55, 127|1, 57, 127"></div>
         <div class="button" label="D" colour="#2200EE" midinote="1, 50, 127"></div>
-        <div class="button" label="E" colour="#2200EE" midinote="1, 52, 127"></div>
+        <div class="button toggle" label="E" colour="#2200EE" midinote="1, 52, 127"></div>
         <div class="button" label="F" colour="#2200EE" midinote="1, 53, 127"></div>
         <div class="button" label="G" colour="#2200EE" midinote="1, 55, 127"></div>
         <div class="button" label="A" colour="#2200EE" midinote="1, 57, 127"></div>
@@ -45,12 +45,12 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="xypad" colour="#00FF00" midicc="1, 74|1, 71"></div>
-      <div class="button toggle" label="Bank C" colour="#33cccc" midicc="1, 7, 0, 127"></div>
-      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 3"></div>
-      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 2"></div>
-      <div class="encoder" label="#" colour="#EE00EE" midicc="1, 6"></div>
+    <div class="row" style="flex: 2">
+      <div class="xypad" colour="#00FF00" midicc="1, 74|1, 71" style="flex: 2"></div>
+      <div class="button toggle" label="PC" colour="#33cccc" midiprog="1, 1, 2, 6"></div>
+      <div class="encoder" label="#" colour="#EE00EE" midiprog="1, 1, 2, 6"></div>
+      <div class="encoder" label="BPM" colour="#EE00EE" midinrpn="1, 2, 63, 200"></div>
+      <div class="encoder" label="Gate" colour="#EE00EE" midinrpn="1, 1, 64, 127"></div>
     </div>
   </div>
 

@@ -7,7 +7,7 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Push button
  * Toggle button
  * Round encoder / knob
- * XY Pad (planned)
+ * XY Pad
 
 Supported MIDI messages are:
  * Note On & Note Off - For button widgets
@@ -22,6 +22,17 @@ Layout is done via HTML, but simplified, everything is laid out with div tags, f
 </div>
 ```
 Adds a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
+
+### MIDI Actions
+There are various MIDI actions that can be attached to a widget, these are
+
+#### MIDI Note
+Send a MIDI note on and off messages
+```javascript
+midinote(channel, note_number, velocity)
+```
+
+midicc
 
 ### Tested Browsers
 Tested on Chrome v49. Chrome is the only browser known to work due to limited MIDI support in other browsers e.g. Firefox and Safari do not support the Web MIDI API spec https://www.w3.org/TR/webmidi/
