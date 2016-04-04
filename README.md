@@ -19,22 +19,34 @@ Layout is done in HTML with simple `div` tags. A series of custom (not standard 
   <div class="slider" colour="#EE8800" midicc="1, 51" label="#"></div>
 </div>
 ```
-This adds a row to the page with a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
+This exapleadds a row to the page with a slider widget, with a orange colour which will send MIDI control change (CC) number 51 on MIDI channel 1
 
 ---
 
 ## Layout and Introduction
-See **basic_template.html** for an example skeleton file to get started with. Within the body of the page there should be at least one div with a class of *main_column*, and a width % specified in a style attribute. Within this, use divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets themselves are also divs with classes as described below, widget divs should be empty with no children. Row and column divs can be nested to layout the page, everything is laid out using CSS3 flexbox to flow and have widgets fill space and the entire page. 
+See **basic_template.html** for an example skeleton file to get started with. Within the body of the page there should be at least one div with a class of *main_column*, and this should have width % specified in a style attribute. Within this div, use child divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets themselves are also divs with classes as described below, widget divs should be empty with no children. Row and column divs can be nested to shape your desired layout for the page. Everything is laid out using CSS3 flexbox, to flow and have widgets fill space and the entire page.
 
 #### General Usage
-Load page, use chrome, MIDI port may not open, specify MIDI port blah 
+Load page, use chrome, MIDI port may not open, specify MIDI port blah
 
 ## Widget Types
-There are four fundamental types of wigdet; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if ommited vertical is the default. This brings the total set of widgets available to six.
+There are four base types of widget; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if omitted the default is vertical.
 
+#### Widget Common Parameters
+Widgets have several common parameters. All attributes are added to the div tag, even though they are not parts of the HTML standard.
 
-#### Common Parameters
-Blah
+* **`colour="{colour_hex_value}"`**
+Set the colour of the widget, used for the widget border and other styling. Specify this using standard HTML hex colour syntax, e.g. `#33FF22`. Yes it is spelt _colour_.
+
+* **`label="{label_text}"`**
+hshshhs
+
+* **`min="{min_value_int}"`**
+hshshhs
+
+* **`max="{max_value_int}"`**
+hshshhs
+
 
 #### Slider
 Blah
