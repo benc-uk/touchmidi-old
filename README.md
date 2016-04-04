@@ -33,20 +33,19 @@ Load page, use chrome, MIDI port may not open, specify MIDI port blah
 There are four base types of widget; `slider`, `button`, `encoder` & `xypad`. The button widget takes an optional specifier `toggle` if it is to act as toggle on/off button. The slider widget can be specified as `vertical` or `horizontal`, if omitted the default is vertical.
 
 #### Widget Common Parameters
-Widgets have several common parameters. All attributes are added to the div tag, even though they are not parts of the HTML standard.
+Widgets have several common parameters. All attributes are added to the div tag, even though they are not parts of the HTML standard. All of these parameters are optional.
 
 * **`colour="{colour_hex_value}"`**
-Set the colour of the widget, used for the widget border and other styling. Specify this using standard HTML hex colour syntax, e.g. `#33FF22`. Yes it is spelt _colour_.
+Sets the colour of the widget, used for the widget border and other styling. Specify this using standard HTML hex colour syntax, e.g. `#33FF22`. If omitted the default colour used is bright green #00FF00. Note. bright colours work best, oh and yes it is spelt _colour_.
 
 * **`label="{label_text}"`**
-hshshhs
+Provides a text label to be displayed on the widget. A hash '#' in the text string will be substituted with the widget's current value. Note. button widgets don't have a value
 
 * **`min="{min_value_int}"`**
-hshshhs
+Sets the minimum value the widget can hold and send. If omitted the default minimum is zero. Note. doesn't apply to buttons which don't hold values.
 
 * **`max="{max_value_int}"`**
-hshshhs
-
+Sets the maximum value the widget can hold and send. If omitted the default maximum is 127. Note. doesn't apply to buttons which don't hold values. 
 
 #### Slider
 Blah
