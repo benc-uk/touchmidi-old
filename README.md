@@ -6,6 +6,7 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Push & toggle button
  * Round encoder
  * XY Pad
+Multi touch is supported
 
 Supported MIDI messages are:
  * Note On & Note off
@@ -34,7 +35,13 @@ See **basic_template.html** for an example skeleton file to get started with. Wi
 
 #### General Usage & MIDI connectivity
 Open the HTML file you have created, in most cases this will be a local file, but can served from a webserver (provided it is uploaded with the lib, css and img folders)
+ * The default MIDI output device that will opened is port 0, to change this specify the port on the URL, e.g. `my_file.html?port=4`
+ * If you want to have every widget on your page to control a single MIDI channel, which is often the case, this can be added to the URL, e.g. `my_file.html?channel=10`. Note. When this is set, the channel parameter for all MIDI actions is ignored and the supplied value is used as an override
 
+If there was a problem opening the MIDI port you will be notified. Make sure your MIDI interface is plugged in before opening the browser, and check the port number is correct (also try port=0, 1, 2 etc).
+
+Simply use your mouse or touchscreen to control the widgets. Multi touch is supported so you can control as many parameters as you have fingers!
+**Protip: For the best experience - hit F11 to switch Chrome to fullscreen, then hit F5 to reload.**
 
 ## Widget Types
 There are four base types of widget, which are set via the standard HTML `class` attribute. These classes are: `slider`, `button`, `encoder` & `xypad`.
