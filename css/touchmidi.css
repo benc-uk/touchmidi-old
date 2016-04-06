@@ -56,6 +56,11 @@ body {
   overflow: hidden;
 }
 
+.space {
+  display: flex;
+  flex: 1 1;
+}
+
 .encoder {
   display: flex;
   flex: 1 1;
