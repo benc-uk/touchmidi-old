@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Touch MIDI: Volca Keys</title>
+  <link rel="stylesheet" href="css/touchmidi.css">
+</head>
+
+<body onload="init()">
+  <div class="main_column" style="width:100%">
+
+    <div class="row">
+      <div class="encoder" label="Voice" midicc="1, 40" min="1" max="6"></div>
+      <div class="encoder" label="Octave" midicc="1, 41" min="1" max="6"></div>
+      <div class="encoder" label="Detune" midicc="1, 42"></div>
+      <div class="encoder" label="Expres" midicc="1, 11"></div>
+      <div class="encoder" label="Portam" midicc="1, 5"></div>
+    </div>
+
+    <div class="row">
+      <div class="encoder" label="cut" midicc="1, 44" min="1" max="6"></div>
+      <div class="encoder" label="oct" midicc="1, 41" min="1" max="6"></div>
+      <div class="encoder" label="det" midicc="1, 42"></div>
+      <div class="encoder" label="exp" midicc="1, 11"></div>
+      <div class="encoder" label="exp" midicc="1, 11"></div>
+    </div>
+
+    <div class="row">
+      <div class="slider" label="Attack<br/>#" midicc="1, 44" colour="#ff6600"></div>
+      <div class="slider" label="Sustain<br/>#" midicc="1, 41" colour="#ff6600"></div>
+      <div class="slider" label="Release<br/>#" midicc="1, 41" colour="#ff6600"></div>
+      <div class="encoder" label="exp" midicc="1, 11"></div>
+      <div class="encoder" label="exp" midicc="1, 11"></div>
+    </div>
+
+    <!-- One octave keyboard -->
+    <div class="column">
+      <div class="row">
+        <div class="space"></div>
+        <div class="button" midinote="1, 49" colour="#0000FF" label="C♯"></div>
+        <div class="button" midinote="1, 51" colour="#0000FF" label="D♯"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="button" midinote="1, 54" colour="#0000FF" label="F♯"></div>
+        <div class="button" midinote="1, 56" colour="#0000FF" label="G♯"></div>
+        <div class="button" midinote="1, 58" colour="#0000FF" label="A♯"></div>
+        <div class="space"></div>
+      </div>
+      <div class="row">
+        <div class="button" midinote="1, 48" colour="#EEEEEE" label="C"></div>
+        <div class="button" midinote="1, 50" colour="#EEEEEE" label="D"></div>
+        <div class="button" midinote="1, 52" colour="#EEEEEE" label="E"></div>
+        <div class="button" midinote="1, 53" colour="#EEEEEE" label="F"></div>
+        <div class="button" midinote="1, 55" colour="#EEEEEE" label="G"></div>
+        <div class="button" midinote="1, 57" colour="#EEEEEE" label="A"></div>
+        <div class="button" midinote="1, 59" colour="#EEEEEE" label="B"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- **** Include JS libraries **** -->
+  <script src="lib/slider.js"></script>
+  <script src="lib/button.js"></script>
+  <script src="lib/encoder.js"></script>
+  <script src="lib/xypad.js"></script>
+  <script src="lib/midi.js"></script>
+  <script src="lib/touchmidi.js"></script>
+</body>
+</html>
