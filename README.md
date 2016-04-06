@@ -32,8 +32,10 @@ Tested on Chrome v49. Chrome is the only browser currently known to work due to 
 ## Layout and Introduction
 See **basic_template.html** for an example skeleton file to get started with. Within the body of the page there should be at least one div with a class of *main_column*, and this should have width % specified in a style attribute. Within this div, use child divs with classes of *row* & *column* to contain the widgets and controls you want. The widgets themselves are also divs with classes as described below, widget divs should be empty with no children. Row and column divs can be nested to shape your desired layout for the page. Everything is laid out using CSS3 flexbox, to flow and have widgets fill space and the entire page.
 
+The [Developer Guide](https://github.com/benc-uk/touchmidi/wiki/Developer-Guide) has everything you need to know about creating your own pages and control surfaces
+
 #### General Usage & MIDI connectivity
-Open the HTML file you have created, in most cases this will be a local file, but can served from a webserver (provided it is uploaded with the lib, css and img folders)
+Open the HTML file you have created or one of the examples, in most cases this will be a local file, but can served from a webserver (provided it is uploaded with the lib, css and img folders)
  * The default MIDI output device that will opened is port 0, to change this specify the port on the URL, e.g. `my_file.html?port=4`
  * If you want to have every widget on your page to control a single MIDI channel, which is often the case, this can be added to the URL, e.g. `my_file.html?channel=10`. Note. When this is set, the channel parameter for all MIDI actions is ignored and the supplied value is used as an override
 
