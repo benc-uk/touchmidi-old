@@ -6,7 +6,6 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
  * Push & toggle button
  * Round encoder
  * XY Pad
-Multi touch is supported
 
 Supported MIDI messages are:
  * Note On & Note off
