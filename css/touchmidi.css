@@ -72,6 +72,18 @@ body {
   cursor: pointer;
 }
 
+.text {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-size: 30px;
+  color: #DDDDDD;
+  font-weight: bold;
+}
+
 canvas {
   background-color: black;
   width: 100%;

@@ -1,7 +1,7 @@
 # TouchMIDI
 A flexible HTML5 based control surface for controlling external devices via MIDI
 
-Designed for use on touch screen devices, but also compatible with keyboard and mouse. A range of simple widgets is supported:
+Designed primarily for use on touch screen devices, but also compatible with keyboard and mouse. A range of simple widgets is supported:
  * Vertical & horizontal slider
  * Push & toggle button
  * Round encoder
@@ -9,7 +9,7 @@ Designed for use on touch screen devices, but also compatible with keyboard and 
 
 Supported MIDI messages are:
  * Note On & Note off
- * Controler change (CC)
+ * Controller change (CC)
  * NRPN
  * Program change / bank select
 
@@ -39,10 +39,12 @@ Open the HTML file you have created or one of the examples, in most cases this w
  * The default MIDI output device that will opened is port 0, to change this specify the port on the URL, e.g. `my_file.html?port=4`
  * If you want to have every widget on your page to control a single MIDI channel, which is often the case, this can be added to the URL, e.g. `my_file.html?channel=10`. Note. When this is set, the channel parameter for all MIDI actions is ignored and the supplied value is used as an override
 
-Currently dyanmic resizing is not supported - so if you resize the browser window, please hit F5 to reload the page to get the optimal layout
-
 If there was a problem opening the MIDI port you will be notified with a popup. Make sure your MIDI interface is plugged in before opening the browser, and check the port number is correct (also try port=0, 1, 2 etc).
 
 Simply use your mouse or touchscreen to control the widgets. Multi touch is supported so you can control as many parameters as you have fingers!
 
-**Protip: For the best experience - hit F11 to switch Chrome to fullscreen, then hit F5 to reload.**
+**Tip: For the best experience, hit F11 to switch Chrome to full screen, then hit F5 to reload the page**
+
+#### Known Issues and Limitations
+ * Currently dynamic resizing is not supported - so if you resize the browser window, please hit F5 to reload the page to get the optimal layout
+ * NRPN is not supported for buttons, too much effort for something that would have little use

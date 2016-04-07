@@ -2,57 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Touch MIDI: Volca Keys</title>
+  <title>Touch MIDI: Volca Bass</title>
   <link rel="stylesheet" href="css/touchmidi.css">
 </head>
 
 <body onload="init()">
   <div class="main_column" style="width:100%">
+
     <div class="row">
-      <div class="column">
-        <div class="button" label="Poly       " midicc="1, 40, 1, 1"   colour="#6644FF"></div>
-        <div class="button" label="Unison     " midicc="1, 40, 30, 30" colour="#6644FF"></div>
-        <div class="button" label="Octave     " midicc="1, 40, 50, 50" colour="#6644FF"></div>
-        <div class="button" label="Fifth      " midicc="1, 40, 70, 70" colour="#6644FF"></div>
-        <div class="button" label="Unison Ring" midicc="1, 40, 99, 99" colour="#6644FF"></div>
-        <div class="button" label="Poly Ring  " midicc="1, 40, 127, 127" colour="#6644FF"></div>
+
+      <div class="row">
+        <div class="slider" label="VCO1" midicc="1, 43" colour="#A82BE8"></div>
+        <div class="slider" label="VCO2" midicc="1, 44" colour="#A82BE8"></div>
+        <div class="slider" label="VCO3" midicc="1, 45" colour="#A82BE8"></div>
       </div>
 
       <div class="column">
-        <div class="encoder" label="Octave" midicc="1, 41" colour="#999999"></div>
-        <div class="encoder" label="Expres" midicc="1, 11" colour="#999999"></div>
+        <div class="encoder" label="  Attack " midicc="1, 46"></div>
+        <div class="encoder" label=" Dec/Rel " midicc="1, 47"></div>
+        <div class="encoder" label="EG Cutoff" midicc="1, 48"></div>
       </div>
 
       <div class="column">
-        <div class="encoder" label="Delay Time" midicc="1, 52" colour="#FF002E"></div>
-        <div class="encoder" label="Delay Fdbk" midicc="1, 53" colour="#FF002E"></div>
+        <div class="encoder" label="Octave" midicc="1, 40"></div>
+        <div class="encoder" label="LFO Rte" midicc="1, 41"></div>
+        <div class="encoder" label="LFO Int" midicc="1, 42"></div>
       </div>
 
       <div class="column">
-        <div class="encoder" label="Detune" midicc="1, 42"></div>
-        <div class="encoder" label="Porta " midicc="1, 5"></div>
-        <div class="encoder" label="VCO EG" midicc="1, 43"></div>
-      </div>
-
-      <div class="column">
-        <div class="encoder" label="Cutoff" midicc="1, 44"></div>
-        <div class="encoder" label=" Peak " midicc="1, 127"></div>
-        <div class="encoder" label="VCF EG" midicc="1, 45"></div>
-      </div>
-
-      <div class="column">
-        <div class="encoder" label=" LFO Rate " midicc="1, 46"></div>
-        <div class="encoder" label="Pitch Int " midicc="1, 47"></div>
-        <div class="encoder" label="Cutoff Int" midicc="1, 48"></div>
+        <div class="encoder" label="Slide " midicc="1, 5"></div>
+        <div class="encoder" label="Exprs " midicc="1, 11"></div>
+        <div class="encoder" label=" Gate " midicc="1, 49"></div>
       </div>
     </div>
 
     <div class="row"> <!-- second row -->
-      <div class="row"> <!-- ADSR -->
-        <div class="slider" label="Attack" midicc="1, 49" colour="#ff3300"></div>
-        <div class="slider" label="Sustain" midicc="1, 51" colour="#ff3300"></div>
-        <div class="slider" label="Decay" midicc="1, 50" colour="#ff3300"></div>
-      </div>
       <!-- One octave keyboard -->
       <div class="column">
         <div class="row">
