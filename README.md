@@ -47,4 +47,4 @@ Simply use your mouse or touchscreen to control the widgets. Multi touch is supp
 
 #### Known Issues and Limitations
  * Currently dynamic resizing is not supported - so if you resize the browser window, please hit F5 to reload the page to get the optimal layout
- * NRPN is not supported for buttons, too much effort for something that would have little use
+ * 

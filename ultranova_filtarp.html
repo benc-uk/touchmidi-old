@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Touch MIDI: Ultranova</title>
+  <link rel="stylesheet" href="css/touchmidi.css">
+</head>
+<!--
+  ======================================================
+   Example file for the Novation Ultranova
+   Controls mapped to filter, arpegiator, effects and some oscilator params
+ =======================================================
+-->
+<body onload="init()">
+  <div class="main_column" style="width:100%">
+
+    <!-- Oscillator and effects -->
+    <div class="row" style="flex:2">
+      <div class="slider" label="Osc1" midicc="1, 51" colour="#ff3300"></div>
+      <div class="slider" label="Osc2" midicc="1, 52" colour="#ff3300"></div>
+      <div class="slider" label="Osc3" midicc="1, 53" colour="#ff3300"></div>
+      <div class="slider" label="Osc1<br/>Den" midicc="1, 23"></div>
+      <div class="slider" label="Osc2<br/>Den" midicc="1, 34"></div>
+      <div class="slider" label="Osc3<br/>Den" midicc="1, 45"></div>
+      <div class="slider" label="Efx 1" midicc="1, 91" colour="#ff00dd"></div>
+      <div class="slider" label="Efx 2" midicc="1, 92" colour="#ff00dd"></div>
+      <div class="slider" label="Efx 3" midicc="1, 93" colour="#ff00dd"></div>
+    </div>
+
+    <!-- 2 octave mini keyboard -->
+    <div class="row">
+      <div class="button toggle" midinote="1, 36" colour="#aaaaaa" label="C"></div>
+      <div class="button toggle" midinote="1, 38" colour="#aaaaaa" label="D"></div>
+      <div class="button toggle" midinote="1, 40" colour="#aaaaaa" label="E"></div>
+      <div class="button toggle" midinote="1, 41" colour="#aaaaaa" label="F"></div>
+      <div class="button toggle" midinote="1, 43" colour="#aaaaaa" label="G"></div>
+      <div class="button toggle" midinote="1, 45" colour="#aaaaaa" label="A"></div>
+      <div class="button toggle" midinote="1, 47" colour="#aaaaaa" label="B"></div>
+
+      <div class="button toggle" midinote="1, 48" colour="#EEEEEE" label="C"></div>
+      <div class="button toggle" midinote="1, 50" colour="#EEEEEE" label="D"></div>
+      <div class="button toggle" midinote="1, 52" colour="#EEEEEE" label="E"></div>
+      <div class="button toggle" midinote="1, 53" colour="#EEEEEE" label="F"></div>
+      <div class="button toggle" midinote="1, 55" colour="#EEEEEE" label="G"></div>
+      <div class="button toggle" midinote="1, 57" colour="#EEEEEE" label="A"></div>
+      <div class="button toggle" midinote="1, 59" colour="#EEEEEE" label="B"></div>
+    </div>
+
+    <!-- XY Pad for filter, arp octave settings and arp gate time -->
+    <div class="row" style="flex:3">
+      <div class="xypad" label="Filter (cut, res) #" midicc="1, 74|1, 71" colour="#ffff00" style="flex:4"></div>
+      <div class="column">
+        <div class="button" label="Arp Oct 1" midinrpn="1, 1, 62, 0, 0" colour="#3333ff" max="99"></div>
+        <div class="button" label="Arp Oct 2" midinrpn="1, 1, 62, 1, 1" colour="#3333ff" max="99"></div>
+        <div class="button" label="Arp Oct 3" midinrpn="1, 1, 62, 2, 2" colour="#3333ff" max="99"></div>
+        <div class="button" label="Arp Oct 4" midinrpn="1, 1, 62, 3, 3" colour="#3333ff" max="99"></div>
+      </div>
+      <div class="slider" label="Arp Gate #" midinrpn="1, 1, 64" colour="#3333ff"></div>
+    </div>
+
+  </div>
+
+  <!-- **** Include JS libraries **** -->
+  <script src="lib/slider.js"></script>
+  <script src="lib/button.js"></script>
+  <script src="lib/encoder.js"></script>
+  <script src="lib/xypad.js"></script>
+  <script src="lib/midi.js"></script>
+  <script src="lib/touchmidi.js"></script>
+</body>
+</html>
