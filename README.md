@@ -25,7 +25,7 @@ This example adds a row to the page with a slider widget, with a orange colour w
 Tested on Chrome v49. Chrome is the only browser currently known to work due to limited MIDI support in other browsers e.g. Firefox and Safari do not support the Web MIDI API spec https://www.w3.org/TR/webmidi/
 
 #### Example Screenshots
-![Screenshot](https://cloud.githubusercontent.com/assets/14982936/14225681/730c9920-f8c3-11e5-8b15-d5865770c0a2.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/14982936/14581342/4c6e8a56-03e2-11e6-883e-a8bdd3dc8eb9.png)
 
 ---
 
