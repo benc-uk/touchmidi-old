@@ -56,7 +56,7 @@ body {
   overflow: hidden;
 }
 
-.space {
+.space, .spacer {
   display: flex;
   flex: 1 1;
 }
