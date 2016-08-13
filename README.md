@@ -10,7 +10,7 @@ Designed primarily for use on touch screen devices, but also compatible with key
 Supported MIDI messages are:
  * Note On & Note off
  * Controller change (CC)
- * NRPN
+ * NRPN (Non Registered Parameter Number)
  * Program change / bank select
 
 Layout is done in HTML with simple `div` tags. A series of custom (not standard HTML) attributes extend the model. For example:
