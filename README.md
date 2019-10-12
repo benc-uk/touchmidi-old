@@ -35,11 +35,15 @@ See [**basic_template.html**](https://github.com/benc-uk/touchmidi/blob/master/b
 The [Developer Guide](https://github.com/benc-uk/touchmidi/wiki/Developer-Guide) has everything you need to know about creating your own pages and control surfaces
 
 #### General Usage & MIDI connectivity
-Open the HTML file you have created or one of the examples, in most cases this will be a local file, but can served from a webserver (provided it is uploaded along with the supporting 'lib', 'css' and 'img' folders)
- * The default MIDI output device that will opened is port 0, to change this specify the port on the URL, e.g. `my_file.html?port=4`
- * If you want to have every widget on your page to control a single MIDI channel, which is often the case, this can be added to the URL, e.g. `my_file.html?channel=10`. Note. When this is set, the channel parameter for all MIDI actions is ignored and the supplied value is used as an override
 
-If there was a problem opening the MIDI port you will be notified with a popup. Make sure your MIDI interface is plugged in before opening the browser, and check the port number is correct (also try port=0, 1, 2 etc).
+**Update Oct 2019** Breaking change: the `port` parameter is no longer used to specify the MIDI device, this has changed to `device` and refers to the device name. See below
+
+Open the HTML file you have created or one of the examples, in most cases this will be a local file, but can served from a webserver (provided it is uploaded along with the supporting 'lib', 'css' and 'img' folders)
+ * You will be prompted with a list of MIDI output devices attached to your system, click one to use it.
+ * To skip the prompt and specify a MIDI output device, put the the `device` parameter on the URL, with the name of the device, e.g. `my_file.html?device=Circuit`
+ * If you want to have every widget on your page to control a single MIDI channel, which is often the case, this can be added to the URL, with the `channel` parameter. e.g. `my_file.html&device=Foo&channel=10`. Note. When this is set, the channel parameter for all MIDI actions in the HTML is ignored and the supplied value is used as an override
+
+If there was a problem opening the MIDI device you will be notified with a popup. Make sure your MIDI interface is plugged in before opening the browser, and check the device name specified is correct.
 
 Simply use your mouse or touchscreen to control the widgets. Multi touch is supported so you can control as many parameters as you have fingers!
 
