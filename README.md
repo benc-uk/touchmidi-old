@@ -1,6 +1,9 @@
 # TouchMIDI
 A flexible HTML5 based control surface for controlling external devices via MIDI
 
+### ⚠ Deprecation Notice
+Note. December 2020 - The project has been superceeded with a rewrite here - https://github.com/benc-uk/touchmidi 
+
 Designed primarily for use on touch screen devices, but also compatible with keyboard and mouse. A range of simple widgets is supported:
  * Vertical & horizontal slider
  * Push & toggle button
